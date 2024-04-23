@@ -1,0 +1,237 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Root Colors*/
+:root{
+    --dk-blue: #0e2d57;
+    --brown: #3a3535;
+	--lt-green: #12b275;
+	--lt-red: #fbdbdb;
+	--burgundy: #3b1717;
+	--lt-blue: #8cd1f7;
+	--lt-brown: #856d6d;
+
+	--box-shadow-sm: -2px 2px 6px var(--lt-brown);
+	--box-shadow-lg: -2px 2px 6px var(--lt-brown);
+
+}
+
+body {
+    background-color: var(--lt-blue);
+    font-weight: 300;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    display: block;
+    max-width: 1280px;
+    line-height: 1.9;
+}
+
+header {
+    background-image: url(images/swiss-valley.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 3.9rem;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    color: var(--dk-blue);
+}
+
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 650;
+    font-style: normal;
+    color: var(--dk-blue);
+	text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin-top: -3rem;
+}
+
+h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav {
+    background-image: url(images/swiss-valley.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 3.9rem;
+    text-align: center;
+    font-size: 30px;
+    color: var(--dk-blue);
+}
+
+nav a {
+    padding: 1rem;
+    color: var(--dk-blue);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: .05px;
+    margin-top: 1rem;
+}
+
+nav a:hover {
+    background-color: var(--brown);
+    color: var(--lt-green);
+}
+
+img{
+	max-width: 100%;
+	grid-row: 2;
+	grid-column: 1/ span 2;
+}
+
+.main {
+	display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+h2 {
+    font-size: 1.7rem;
+    color: var(--dk-blue);
+	font-weight: bold;
+	padding-bottom: 15px;
+	text-align: center;
+	margin-top: -2px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--dk-blue);
+    text-align: center;
+}
+
+.content-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.content-group > div {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+}
+
+.content-group img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+form{
+	padding: 30px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 600px;
+	background-color: var(--lt-green);
+	border-radius: 5px;
+	box-shadow: var(--box-shadow-lg);
+	max-height: 500px;
+}
+
+label{
+	margin: 0 0 4px 16px;
+	font-weight: bold;
+}
+
+input, select, textarea{
+	padding: 10px;
+	font-size: 1rem;
+	margin-bottom: -15px;
+	border-radius: 3px;
+	border: 1px var(--lt-blue);
+	background-color: white;
+}
+
+legend{
+	font-weight: bold;
+}
+
+input[type="submit"]{
+	background-color: white;
+	border: 1px var(--dk-blue);
+	font-size: 1.1rem;
+	font-weight: bold;
+	width: 150px;
+	box-shadow: var(--dk-blue);
+}
+
+input[type="submit"]:focus{
+	outline: 4px solid var(--dk-blue);
+}
+
+input:focus, select:focus, textarea:focus{
+	outline: 4px solid var(--dk-blue);
+}
+
+input[type="submit"]:hover{
+	box-shadow: -3px 3px 5px var(--dk-blue);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--brown);
+    color: var(--lt-green);
+}
